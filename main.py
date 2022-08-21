@@ -1,4 +1,4 @@
-from tkinter import *
+rom tkinter import *
 from tkinter import messagebox
 import sqlite3
 from sqlite3 import Error
@@ -37,18 +37,7 @@ class MainWin(Tk):
         def r_s(MainWin):
             from Remove_student import  Rem
 
-        def ib(MainWin):
-            from issueTable import  issue
 
-        def rb1(MainWin):
-            from renew import renew
-
-        def ret(MainWin):
-            from ret import ret
-
-
-        def sea(MainWin):
-            from Search import Sea
 
         # def handle(event):
         #     if self.listTree.identify_region(event.x,event.y) == "separator":
@@ -59,8 +48,7 @@ class MainWin(Tk):
             from Rem import Rem
         def cfine(MainWin):
             from fine import Fine
-        def sest(MainWin):
-           from  Search_Student import  Sst
+
 
 #creating table
 
@@ -164,10 +152,6 @@ class MainWin(Tk):
                     self.brt = Button(self, text='Trouver', width=15, font=('arial', 10),command = ent).place(x=700, y=266)
                     self.label6 = Label(self, text="Details", bg='dark grey', font=('Arial', 15, 'underline', 'bold'))
                     self.label6.place(x=20, y=350)
-                    self.button = Button(self, text='Chercher un étudiant', width=20, font=('Algerian', 20), command=lambda MainWin=MainWin :sest(MainWin)).place(x=1000,y=250)
-                    self.button = Button(self, text='Chercher un livre', width=20, font=('Algerian', 20), command=lambda MainWin=MainWin :sea(MainWin)).place(x=1000,y=350)
-                    self.brt = Button(self, text="Confier un livre", width=20, font=('Algerian', 20), command=lambda MainWin=MainWin :ib(MainWin)).place(x=1000, y=450)
-                    self.brt = Button(self, text="Retourner un livre", width=20, font=('Algerian', 20), command=lambda MainWin=MainWin :ret(MainWin)).place(x=1000, y=550)
             except Error:
                 messagebox.showerror("Error", "il ya un problème")
         check()
